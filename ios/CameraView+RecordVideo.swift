@@ -195,6 +195,9 @@ extension CameraView: AVCaptureVideoDataOutputSampleBufferDelegate, AVCaptureAud
   public final func captureOutput(_ captureOutput: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from _: AVCaptureConnection) {
     // Video Recording runs in the same queue
     var timestamp = CMSampleBufferGetPresentationTimeStamp(sampleBuffer)
+      if let device = videoDeviceInput?.device {
+          ReactLogger.log(level: .info, message: "ISO: \(device.iso) Exposure: \(CMTimeGetSeconds(device.exposureDuration)*1000000.0) us")
+      }
     if isRecording {
       guard let recordingSession = recordingSession else {
         invokeOnError(.capture(.unknown(message: "isRecording was true but the RecordingSession was null!")))

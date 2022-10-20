@@ -132,6 +132,8 @@ final class CameraViewManager: RCTViewManager {
           "supportsRawCapture": false, // TODO: supportsRawCapture
           "supportsLowLightBoost": $0.isLowLightBoostSupported,
           "supportsFocus": $0.isFocusPointOfInterestSupported,
+          "minExposureTargetBias": $0.minExposureTargetBias,
+          "maxExposureTargetBias": $0.maxExposureTargetBias,
           "formats": $0.formats.map { format -> [String: Any] in
             format.toDictionary()
           },

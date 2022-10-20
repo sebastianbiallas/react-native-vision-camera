@@ -40,6 +40,10 @@ RCT_EXPORT_VIEW_PROPERTY(hdr, NSNumber); // nullable bool
 RCT_EXPORT_VIEW_PROPERTY(lowLightBoost, NSNumber); // nullable bool
 RCT_EXPORT_VIEW_PROPERTY(colorSpace, NSString);
 RCT_EXPORT_VIEW_PROPERTY(videoStabilizationMode, NSString);
+RCT_EXPORT_VIEW_PROPERTY(activeMaxExposureDurationUs, NSNumber)
+RCT_EXPORT_VIEW_PROPERTY(exposureTargetBias, NSNumber);
+RCT_EXPORT_VIEW_PROPERTY(exposureUs, NSNumber);
+RCT_EXPORT_VIEW_PROPERTY(ISO, NSNumber);
 // other props
 RCT_EXPORT_VIEW_PROPERTY(preset, NSString);
 RCT_EXPORT_VIEW_PROPERTY(torch, NSString);
